@@ -1,0 +1,3 @@
+﻿  Base_Images.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  PictureManager.vcxproj -> C:\Users\User\Downloads\PictureManager\x64\Debug\PictureManager.exe
