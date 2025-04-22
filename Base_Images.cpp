@@ -23,12 +23,19 @@ void Base_Images::Print()
 		std::cout << image.first << "\n";image.second->Print();
 	}
 
-	/*for (const ASCII_Image* i : map_)
+
+	// нужно починить вывод аски изображений
+	
+	if (map_.empty())
 	{
+		std::cout << "Map пустая\n";
+		::exit(-1);
+	}
 
-	}*/
-
-
-	// нужно дописать запись аски изображений в мапу и её вывод
-	map_.insert(std::make_pair(name, ASCII_Image));
+	for (const auto& [key, value] : map_) 
+	{
+		std::cout << "Key: " << key << " | Value: "
+			<< (value ? "ASCII_Image@" + std::to_string(reinterpret_cast<uintptr_t>(value)) : "nullptr")
+			<< "\n";
+	}
 }
