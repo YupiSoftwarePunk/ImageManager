@@ -20,7 +20,7 @@ void Base_Images::Print()
 {
 	for (const auto& image : map_)
 	{
-		std::cout << image.first << "\n";image.second->Print();
+		std::cout << image.first << "\n"; image.second->Print();
 	}
 
 
@@ -34,8 +34,8 @@ void Base_Images::Print()
 
 	for (const auto& [key, value] : map_) 
 	{
-		std::cout << "Key: " << key << " | Value: "
-			<< (value ? "ASCII_Image@" + std::to_string(reinterpret_cast<uintptr_t>(value)) : "nullptr")
-			<< "\n";
+		std::cout << "Key: " << key << "\t\tValue: "
+			<< (value ?  std::to_string(reinterpret_cast<uintptr_t>(value)) : "nullptr")
+			<< "\n\n";
 	}
 }
