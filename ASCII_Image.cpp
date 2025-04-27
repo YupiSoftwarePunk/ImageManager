@@ -36,3 +36,22 @@ void ASCII_Image::Print()
 {
 	std::cout << image_;
 }
+
+void ASCII_Image::Printt()
+{
+	std::ifstream file(image_);
+
+	if (!file.is_open())
+	{
+		std::cout << "ERROR\tCan't open file";
+		return;
+	}
+
+	std::string line;
+	while (std::getline(file, line))
+	{
+		std::cout << line << "\n";
+	}
+
+	file.close();
+}

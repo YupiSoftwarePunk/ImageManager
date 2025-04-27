@@ -20,6 +20,8 @@ public:
 	ASCII_Image Clone();
 	void Print();
 
+	void Printt();
+
 private:
 	std::string image_;
 };

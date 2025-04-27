@@ -32,10 +32,19 @@ void Base_Images::Print()
 		::exit(-1);
 	}
 
-	for (const auto& [key, value] : map_) 
+	for (const auto& [filename, image_ptr] : map_)
 	{
-		std::cout << "Key: " << key << "\t\tValue: "
-			<< (value ?  std::to_string(reinterpret_cast<uintptr_t>(value)) : "nullptr")
-			<< "\n\n";
+		std::cout << "Filename: " << filename << "\n";
+
+		if (image_ptr) 
+		{
+			image_ptr->Printt();
+		}
+		else
+		{
+			std::cout << "Invalid image pointer\n";
+		}
+
+		std::cout << "\n"; 
 	}
 }
